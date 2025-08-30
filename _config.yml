@@ -1,0 +1,12 @@
+title: "VGCC"
+short_name: "VGCC"
+tagline: "Video Game Culture Community"
+description: "A playful community exploring games, tools, and creative tech."
+url: "https://vgcc-hub.github.io"   # IMPORTANT for absolute_url
+og_locale: "en_US"
+theme_color: "#6C5CE7"
+
+# Default social images (put real files in /assets/social/)
+social_image: "/assets/social/default-1200x630.png"
+social_image_small: "/assets/social/default-600x315.png"
+og_image_alt: "VGCC preview image"
