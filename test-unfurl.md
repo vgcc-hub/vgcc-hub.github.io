@@ -1,5 +1,5 @@
 ---
-layout: unfurl
+layout: shareable
 title: "Test Unfurl"
 description: "This is a description for unfurl previews"
 image: "/assets/images/test.png"
