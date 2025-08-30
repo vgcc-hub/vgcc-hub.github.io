@@ -62,3 +62,7 @@ always be better in some way - can tell more stories, can reach more people, can
 connections - and we hope to create a mentality in this space where this growth sustains well
 after we’re gone.
 Above is likely fairly set, below likely has some filling out to do
+
+---
+
+See more on [Blueskey](https://bsky.app/profile/vgcc.bsky.social)
