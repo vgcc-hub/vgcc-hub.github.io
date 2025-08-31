@@ -65,4 +65,4 @@ Above is likely fairly set, below likely has some filling out to do
 
 ---
 
-See more on [Blueskey](https://bsky.app/profile/vgcc.bsky.social)
+See more on [Bluesky](https://bsky.app/profile/vgcc.bsky.social)
