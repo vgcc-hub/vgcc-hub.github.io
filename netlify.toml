@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/test"
+  to = "https://vgcc-hub.github.io?v=1.0"
+  status = 302
