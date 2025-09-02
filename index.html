@@ -1,1 +1,278 @@
-<!doctype html><title>Page title</title><p>VGCC</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>VGCC - Video Game Community Culture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Video Game Culture Community Website" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="VGCC - Video Game Community Culture" />
+  <meta property="og:description" content="Video Game Culture Community Websit" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vgcc.art/" />
+  <meta property="og:image" content="https://d3ol0azg234pxv.cloudfront.net/v1/vgcc-hub/branding-assets/main/card/card-master-240-160.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#000030',
+            plum: '#3f0a57',
+            magenta: '#85106b',
+            crimson: '#b02c2c',
+            copper: '#b8673e',
+            amber: '#d9932b',
+            sand: '#f0bd71',
+            cream: '#ffe3ba'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(240,189,113,0.25)'
+          },
+          backgroundImage: {
+            'hero-gradient': 'radial-gradient(1000px 600px at 10% 10%, rgba(133,16,107,0.30), transparent 60%), radial-gradient(900px 500px at 90% 20%, rgba(184,103,62,0.22), transparent 60%), radial-gradient(800px 400px at 50% 80%, rgba(217,147,43,0.18), transparent 60%)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Minimal base styles for better contrast -->
+  <style>
+    html, body { height: 100%; }
+    /* smoother anchor scrolling */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="min-h-full bg-midnight text-cream font-sans">
+  <!-- Header / Nav -->
+  <header class="relative z-20 border-b border-white/10 bg-midnight/70 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="inline-flex items-center gap-2">
+          <span class="inline-block h-3 w-3 rounded-full bg-amber"></span>
+          <span class="text-cream font-semibold tracking-wide">VGCC</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#mission" class="text-cream/80 hover:text-cream">Mission</a>
+          <a href="#network" class="text-cream/80 hover:text-cream">Network</a>
+          <a href="#about" class="text-cream/80 hover:text-cream">About</a>
+          <a href="#cta" class="inline-flex items-center gap-2 rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+            Get info now
+          </a>
+        </nav>
+        <button class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-cream/80 hover:text-cream hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sand" aria-label="Open menu" onclick="document.getElementById('mnav').classList.toggle('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mnav" class="md:hidden hidden border-t border-white/10">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 space-y-2">
+        <a href="#mission" class="block text-cream/90">Features</a>
+        <a href="#network" class="block text-cream/90">Network</a>
+        <a href="#about" class="block text-cream/90">About</a>
+        <!-- <a href="#cta" class="inline-flex items-center gap-2 rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta">Get info now</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Jumbo Title & Subtitle -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-hero-gradient pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <div class="max-w-3xl">
+        <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+          VGCC<br/>
+          <span class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-sand via-amber to-cream">Video Game Culture Community</span>
+        </h1>
+        <p class="mt-5 text-lg sm:text-xl text-cream/85">
+          The <strong>VGCC (Video Game Culture Community)</strong> is an organization dedicated to supporting the cultural field of art that is video games. We are a small group of individuals with a passion for video games and a drive to cultivate positive experiences for all members of the larger video game community. We aspire to represent fans of all types of video games in an attempt to cultivate wider understanding and representation of video games as a cultural art form.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#cta" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+            Get info now
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 -mr-0.5" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 3.5a.75.75 0 0 0-1.5 0v5.25H4a.75.75 0 0 0 0 1.5h5.25V15a.75.75 0 0 0 1.5 0V10.25H16a.75.75 0 0 0 0-1.5h-5.25V3.5Z"/></svg>
+          </a>
+          <a href="#features" class="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-base font-semibold text-cream hover:bg-white/10">
+            Learn more
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 sm:py-24 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-bold tracking-tight">Mission</h2>
+        <p class="mt-3 text-cream/85">The mission of the VGCC is to help good developers and publishers create and promote video games as a cultural art form.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-xl border border-white/10 bg-white/5 p-6 shadow-glow hover:bg-white/10 transition">
+          <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-plum to-magenta flex items-center justify-center">
+            <svg class="h-5 w-5 text-cream" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 1-7.07 17.07L2 22l2.93-2.93A10 10 0 0 1 12 2z"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">To Have Fun</h3>
+          <p class="mt-2 text-cream/85">Fun begets fun. Above all else we understand that joyless organizations have no organic
+grassroots way to promote or inspire fun. We strive to demonstrate the fun that can be had with
+video games by keeping this goal behind all we do.</p>
+        </div>
+
+        <div class="rounded-xl border border-white/10 bg-white/5 p-6 shadow-glow hover:bg-white/10 transition">
+          <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-crimson to-copper flex items-center justify-center">
+            <svg class="h-5 w-5 text-cream" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v6H4V4zm0 10h10v6H4v-6z"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">To broaden the idea of video games as a cultural art form</h3>
+          <p class="mt-2 text-cream/85">Video games are art. From the simplest small game to the most in depth narrative driven 100+
+hour bestseller, games inspire us in the same ways that books or music or paintings or any
+other artform does. However, video games are rarely viewed at the same level or on the same
+stage. We strive to change this.</p>
+        </div>
+
+        <div class="rounded-xl border border-white/10 bg-white/5 p-6 shadow-glow hover:bg-white/10 transition">
+          <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-amber to-sand flex items-center justify-center">
+            <svg class="h-5 w-5 text-midnight" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 6-9 6-9-6 9-6zm0 7.5l9 6-9 6-9-6 9-6z"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">To build community in the video game space</h3>
+          <p class="mt-2 text-cream/85">Video games naturally create and foster communities around games. We strive to maintain
+these communities while also facilitating higher order communities which encompass more and
+more parts of this space. We aim to foster the idea that all fans of video games are more similar
+in that way than they are different.
+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network (people / nodes / partners) -->
+  <section id="network" class="py-16 sm:py-24 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight">A network that works</h2>
+          <p class="mt-3 max-w-2xl text-cream/85">We strive to identify, platform,
+and support good developers and publishers that are making and producing good games that
+help drive the broader cultural artform that is video games.</p>
+        </div>
+        <a href="#cta" class="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold hover:bg-white/10">Join the network</a>
+      </div>
+
+      <!-- Node grid with connecting lines (decorative) -->
+      <div class="relative mt-10">
+        <!-- connecting lines -->
+        <svg class="pointer-events-none absolute inset-0 h-full w-full opacity-30" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0%" stop-color="#3f0a57"/>
+              <stop offset="50%" stop-color="#85106b"/>
+              <stop offset="100%" stop-color="#d9932b"/>
+            </linearGradient>
+          </defs>
+          <!-- simple diagonal network pattern -->
+          <path d="M0 40 L1000 200" stroke="url(#g)" stroke-width="1" fill="none" />
+          <path d="M0 160 L1000 320" stroke="url(#g)" stroke-width="1" fill="none" />
+          <path d="M0 280 L1000 440" stroke="url(#g)" stroke-width="1" fill="none" />
+        </svg>
+
+        <div class="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <!-- Node card -->
+          <!-- Repeatable node component -->
+          <template id="node-template"></template>
+
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+            <img src="https://images.squarespace-cdn.com/content/v1/65f36ec717527832d9ec4855/f5b1e7d5-3fad-4cb9-986c-32550964d647/favicon.ico?format=100w" alt="Partner node" class="mx-auto h-20 w-20 rounded-full border border-white/20 shadow"/>
+            <h3 class="mt-3 text-center font-semibold">House Cat Games</h3>
+            <p class="mt-1 text-center text-xs text-cream/80">We support game developers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Story -->
+  <section id="about" class="py-16 sm:py-24 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight">We are looking for talent</h2>
+          <p class="mt-4 text-cream/85">
+            Video games naturally create and foster communities around games. We strive to maintain
+these communities while also facilitating higher order communities which encompass more and
+more parts of this space. We aim to foster the idea that all fans of video games are more similar
+in that way than they are different.
+          </p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-sand"></span>
+              <span><strong>Artists</strong></span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-amber"></span>
+              <span><strong>Programmers</strong></span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-block h-2 w-2 rounded-full bg-copper"></span>
+              <span><strong>Anyone passionate about video game culture</strong></span>
+            </li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-plum/40 via-magenta/30 to-amber/30 blur-2xl"></div>
+          <img src="https://picsum.photos/seed/board/960/640" alt="Team collaborating dashboard"
+               class="relative rounded-2xl border border-white/10 shadow-glow"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="py-16 sm:py-24 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-plum/50 via-magenta/40 to-copper/40 p-8 sm:p-12">
+        <div class="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-amber/20 blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-sand/20 blur-3xl"></div>
+
+        <div class="relative">
+          <h2 class="text-3xl sm:text-4xl font-extrabold">Interesting in Joining?</h2>
+          <p class="mt-3 max-w-2xl text-cream/90">We are an open community of gamers and creators. We are a looking for artists, musicians, programmers, and anyone passionate about video gaming culture.</p>
+
+          <form class="mt-8 grid gap-4 sm:grid-cols-3" onsubmit="event.preventDefault(); location.assign('https://forms.gle/8srLaqzS7KEsiuUKA');">
+            <label class="sr-only" for="email">Email</label>
+            <!-- <input id="email" type="email" required placeholder="you@example.com" class="sm:col-span-2 w-full rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-cream placeholder:text-cream/60 focus:outline-none focus:ring-2 focus:ring-sand"/> -->
+            <button type="submit"
+              class="inline-flex items-center justify-center rounded-lg bg-amber px-6 py-3 text-midnight font-semibold hover:bg-sand focus:outline-none focus-visible:ring-2 focus-visible:ring-cream">
+              Get info now
+            </button>
+          </form>
+
+          <p class="mt-3 text-xs text-cream/75">We respect your inbox. No spam—just useful info.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-cream/80">&copy; <span id="year"></span> VGCC. All rights reserved.</p>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="https://forms.gle/8srLaqzS7KEsiuUKA" class="text-cream/80 hover:text-cream">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
