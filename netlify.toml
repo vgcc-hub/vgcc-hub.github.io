@@ -3,6 +3,6 @@
   publish = "./_site"
 
 [[redirects]]
-  from = "/test"
-  to = "https://vgcc-hub.github.io?v=1.0"
+  from = "/forms/pitch-meeting"
+  to = "https://airtable.com/app5dB4okptziH2Vf/pag9hOyPHUe1PARv0/form"
   status = 302
