@@ -4,7 +4,8 @@
   "description": "## What/Who We Are The VGCC is an organization dedicated to supporting the cultural field of art that is video games. We are a small group of individuals with a passion for video games and a drive to cultivate positive experiences for all members of the larger video game community. We aspire to represent fans of all types of video games in an attempt to cultivate wider understanding and representation of video games as a cultural art form.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve"
   },
   "repository": {
     "type": "git",

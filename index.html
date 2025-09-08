@@ -1,86 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>VGCC - Video Game Community Culture</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Video Game Culture Community Website" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="VGCC - Video Game Community Culture" />
-  <meta property="og:description" content="Video Game Culture Community Websit" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vgcc.art/" />
-  <meta property="og:image" content="https://d3ol0azg234pxv.cloudfront.net/v1/vgcc-hub/branding-assets/main/card/card-master-240-160.png" />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            midnight: '#000030',
-            plum: '#3f0a57',
-            magenta: '#85106b',
-            crimson: '#b02c2c',
-            copper: '#b8673e',
-            amber: '#d9932b',
-            sand: '#f0bd71',
-            cream: '#ffe3ba'
-          },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
-          },
-          boxShadow: {
-            glow: '0 0 40px rgba(240,189,113,0.25)'
-          },
-          backgroundImage: {
-            'hero-gradient': 'radial-gradient(1000px 600px at 10% 10%, rgba(133,16,107,0.30), transparent 60%), radial-gradient(900px 500px at 90% 20%, rgba(184,103,62,0.22), transparent 60%), radial-gradient(800px 400px at 50% 80%, rgba(217,147,43,0.18), transparent 60%)'
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Minimal base styles for better contrast -->
-  <style>
-    html, body { height: 100%; }
-    /* smoother anchor scrolling */
-    html { scroll-behavior: smooth; }
-  </style>
-</head>
-<body class="min-h-full bg-midnight text-cream font-sans">
-  <!-- Header / Nav -->
-  <header class="relative z-20 border-b border-white/10 bg-midnight/70 backdrop-blur">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="inline-flex items-center gap-2">
-          <span class="inline-block h-3 w-3 rounded-full bg-amber"></span>
-          <span class="text-cream font-semibold tracking-wide">VGCC</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#mission" class="text-cream/80 hover:text-cream">Mission</a>
-          <a href="#network" class="text-cream/80 hover:text-cream">Network</a>
-          <a href="#about" class="text-cream/80 hover:text-cream">About</a>
-          <a href="#cta" class="inline-flex items-center gap-2 rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
-            Get info now
-          </a>
-        </nav>
-        <button class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-cream/80 hover:text-cream hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sand" aria-label="Open menu" onclick="document.getElementById('mnav').classList.toggle('hidden')">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mnav" class="md:hidden hidden border-t border-white/10">
-      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 space-y-2">
-        <a href="#mission" class="block text-cream/90">Mission</a>
-        <a href="#network" class="block text-cream/90">Network</a>
-        <a href="#about" class="block text-cream/90">About</a>
-        <!-- <a href="#cta" class="inline-flex items-center gap-2 rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta">Get info now</a> -->
-      </nav>
-    </div>
-  </header>
+---
+title: VGCC - Video Game Culture Community
+layout: layouts/base_tailwind.njk
+network_partners:
+  - name: House Cat Games
+    description: We support game developers
+    url: https://www.housecatgames.com/
+    logo: https://images.squarespace-cdn.com/content/v1/65f36ec717527832d9ec4855/f5b1e7d5-3fad-4cb9-986c-32550964d647/favicon.ico?format=100w
+contact_form_url: https://forms.gle/8srLaqzS7KEsiuUKA
+---
 
   <!-- Hero / Jumbo Title & Subtitle -->
   <section class="relative overflow-hidden">
@@ -189,11 +116,13 @@ help drive the broader cultural artform that is video games.</p>
           <template id="node-template"></template>
 
           <div class="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-            <a href="https://www.housecatgames.com/" target="_blank">
-              <img src="https://images.squarespace-cdn.com/content/v1/65f36ec717527832d9ec4855/f5b1e7d5-3fad-4cb9-986c-32550964d647/favicon.ico?format=100w" alt="Partner node" class="mx-auto h-20 w-20 rounded-full border border-white/20 shadow object-none"/>
-              <h3 class="mt-3 text-center font-semibold">House Cat Games</h3>
-              <p class="mt-1 text-center text-xs text-cream/80">We support game developers</p>
+            {% for partner in network_partners %}
+            <a href="{{ partner.url }}" target="_blank">
+              <img src="{{ partner.logo }}" alt="Partner node" class="mx-auto h-20 w-20 rounded-full border border-white/20 shadow object-none"/>
+              <h3 class="mt-3 text-center font-semibold">{{ partner.name }}</h3>
+              <p class="mt-1 text-center text-xs text-cream/80">{{ partner.description }}</p>
             </a>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -245,7 +174,7 @@ in that way than they are different.
           <h2 class="text-3xl sm:text-4xl font-extrabold">Interesting in Joining?</h2>
           <p class="mt-3 max-w-2xl text-cream/90">We are an open community of gamers and creators. We are a looking for artists, musicians, programmers, and anyone passionate about video gaming culture.</p>
 
-          <form class="mt-8 grid gap-4 sm:grid-cols-3" onsubmit="event.preventDefault(); location.assign('https://forms.gle/8srLaqzS7KEsiuUKA');">
+          <form class="mt-8 grid gap-4 sm:grid-cols-3" onsubmit="event.preventDefault(); location.assign('{{ contact_form_url }}');">
             <label class="sr-only" for="email">Email</label>
             <!-- <input id="email" type="email" required placeholder="you@example.com" class="sm:col-span-2 w-full rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-cream placeholder:text-cream/60 focus:outline-none focus:ring-2 focus:ring-sand"/> -->
             <button type="submit"
@@ -259,20 +188,3 @@ in that way than they are different.
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-white/10">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-cream/80">&copy; <span id="year"></span> VGCC. All rights reserved.</p>
-      <nav class="flex items-center gap-4 text-sm">
-        <a href="https://forms.gle/8srLaqzS7KEsiuUKA" class="text-cream/80 hover:text-cream">Contact</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script>
-    // set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>

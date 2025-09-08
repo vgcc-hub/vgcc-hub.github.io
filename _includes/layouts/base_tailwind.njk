@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>VGCC - Video Game Community Culture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Video Game Culture Community Website" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="VGCC - Video Game Community Culture" />
+  <meta property="og:description" content="Video Game Culture Community Websit" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vgcc.art/" />
+  <meta property="og:image" content="https://d3ol0azg234pxv.cloudfront.net/v1/vgcc-hub/branding-assets/main/card/card-master-240-160.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#000030',
+            plum: '#3f0a57',
+            magenta: '#85106b',
+            crimson: '#b02c2c',
+            copper: '#b8673e',
+            amber: '#d9932b',
+            sand: '#f0bd71',
+            cream: '#ffe3ba'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(240,189,113,0.25)'
+          },
+          backgroundImage: {
+            'hero-gradient': 'radial-gradient(1000px 600px at 10% 10%, rgba(133,16,107,0.30), transparent 60%), radial-gradient(900px 500px at 90% 20%, rgba(184,103,62,0.22), transparent 60%), radial-gradient(800px 400px at 50% 80%, rgba(217,147,43,0.18), transparent 60%)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Minimal base styles for better contrast -->
+  <style>
+    html, body { height: 100%; }
+    /* smoother anchor scrolling */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="min-h-full bg-midnight text-cream font-sans">
+    
+  {% include "layouts/base_header_nav.njk" %}
+
+  {{ content | safe }}
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-cream/80">&copy; <span id="year"></span> VGCC. All rights reserved.</p>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="https://forms.gle/8srLaqzS7KEsiuUKA" class="text-cream/80 hover:text-cream">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
