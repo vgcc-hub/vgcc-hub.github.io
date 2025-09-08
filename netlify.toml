@@ -6,3 +6,13 @@
   from = "/forms/pitch-meeting"
   to = "https://airtable.com/app5dB4okptziH2Vf/pag9hOyPHUe1PARv0/form"
   status = 302
+
+[[redirects]]
+  from = "/forms/ted-talk"
+  to = "https://airtable.com/app5dB4okptziH2Vf/pag8NKnCL2PgIEKgG/form"
+  status = 302
+
+[[redirects]]
+  from = "/forms/show-and-tell"
+  to = "https://airtable.com/app5dB4okptziH2Vf/pagwjd5wx6uPXupR4/form"
+  status = 302
