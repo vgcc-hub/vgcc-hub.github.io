@@ -12,7 +12,7 @@ events:
     date: "Recurring every 1st and 3rd Friday at 3PM EDT"
     location: "Discord"
     description: "This meeting will serve as a space for anyone to pitch a new idea. The goal is to capture the idea and document the work."
-    submit_link: "https://vgcc.art/meetings/pitch-meeting/form"
+    submit_link: "/events/pitch-meeting/form"
   - title: "Show and Tell"
     id: "show-and-tell"
     date: "Recurring every 2nd and 4th Friday at 3PM EDT"
@@ -20,7 +20,7 @@ events:
     description: "This is a weekly update from the VGCC Team to project members, the general community, and leadership. After the organization shares updates, the floor opens for audience participation.
 
 The agenda stays open, with the goals of sharing knowledge, sparking curiosity, encouraging critical reasoning, and inspiring creative output. "
-    submit_link: "https://vgcc.art/meetings/show-and-tell/form"
+    submit_link: "/events/show-and-tell/form"
 ---
 
   <!-- Features -->
@@ -34,12 +34,12 @@ The agenda stays open, with the goals of sharing knowledge, sparking curiosity, 
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {% for event in events %}
         <div id="{{ event.id }}" class="rounded-xl border border-white/10 bg-white/5 p-6 shadow-glow hover:bg-white/10 transition">
-          <h3 class="mt-4 text-lg font-semibold">{{ event.title }}</h3>
+          <h3 class="mt-4 text-lg font-semibold"><a href="/events/{{ event.id }}">{{ event.title }}</a></h3>
           <p class="mt-1 text-sm text-cream/70"><strong>Date:</strong> {{ event.date }}</p>
           <p class="mt-2 text-cream/85">{{ event.description }}</p>
-          <!-- button for submission form -->
+          <a href="/events/{{ event.id }}" class="mt-4 inline-block rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">More Info</a>
           {% if event.submit_link %}
-          <a href="{{ event.submit_link }}" class="mt-4 inline-block rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">Submission Form</a>
+          <a href="{{ event.submit_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">Submission Form</a>
           {% endif %}
         </div>
         {% endfor %}
