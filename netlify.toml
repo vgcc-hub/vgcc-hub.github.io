@@ -16,3 +16,33 @@
   from = "/forms/show-and-tell"
   to = "https://airtable.com/app5dB4okptziH2Vf/pagwjd5wx6uPXupR4/form"
   status = 302
+
+[[redirects]]
+  from = "/meetings/pitch-meeting/form"
+  to = "https://airtable.com/app5dB4okptziH2Vf/pag9hOyPHUe1PARv0/form"
+  status = 302
+
+[[redirects]]
+  from = "/meetings/pitch-meeting/kanban"
+  to = "https://airtable.com/app5dB4okptziH2Vf/shruS27BX6qZnY22l"
+  status = 302
+
+[[redirects]]
+  from = "/meetings/ted-talk/form"
+  to = "https://airtable.com/app5dB4okptziH2Vf/pag8NKnCL2PgIEKgG/form"
+  status = 302
+
+[[redirects]]
+  from = "/meetings/ted-talk/kanban"
+  to = "https://airtable.com/app5dB4okptziH2Vf/shrm3oXRK4PaEB3Rv"
+  status = 302
+
+[[redirects]]
+  from = "/meetings/show-and-tell/form"
+  to = "https://airtable.com/app5dB4okptziH2Vf/pagwjd5wx6uPXupR4/form"
+  status = 302
+
+[[redirects]]
+  from = "/meetings/show-and-tell/kanban"
+  to = "https://airtable.com/app5dB4okptziH2Vf/shreyiEFg4PriwwjV"
+  status = 302
