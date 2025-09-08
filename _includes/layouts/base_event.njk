@@ -17,9 +17,9 @@
         <p class="mt-5 text-lg sm:text-xl text-cream/85">{{ content | safe }}</p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
-        {% if event.submit_link %}
-          <a href="#cta" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
-            Get info now
+        {% if submit_link %}
+          <a href="{{ submit_link }}" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+            Submission Form
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 -mr-0.5" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 3.5a.75.75 0 0 0-1.5 0v5.25H4a.75.75 0 0 0 0 1.5h5.25V15a.75.75 0 0 0 1.5 0V10.25H16a.75.75 0 0 0 0-1.5h-5.25V3.5Z"/></svg>
           </a>
         {% endif %}
