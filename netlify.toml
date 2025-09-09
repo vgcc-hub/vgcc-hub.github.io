@@ -1,5 +1,5 @@
 [build]
-  command = "npm i && npx @11ty/eleventy"
+  command = "npm ci && npm build"
   publish = "./_site"
 
 [[redirects]]
