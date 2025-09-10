@@ -1,0 +1,30 @@
+layout: layouts/base_event.njk
+events:
+  - id: state-of-vgcc
+    title: "State of VGCC"
+    subtitle: "A weekly update from VGCC Leadership"
+    description: This is a weekly update from VGCC Leadership to the community. After updates from the organization there would be a chance for audience participation - asking to speak or asking to be an active participant.
+    event_date: "Every Monday at 3PM EDT"
+
+  - id: big-idea-seminar
+    title: "Big Idea Seminar"
+    subtitle: "Ideas that require some thoughtfullness"
+    event_date: "Every Monday at 3PM EDT"
+    submit_link: https://airtable.com/app5dB4okptziH2Vf/pagiJI5ITTR0cuo1w/form?prefill_Category=Big+Idea
+  
+  - id: show-and-tell
+    title: "Show and Tell"
+    subtitle: "Show off anything you have been working on"
+    description: >
+      This is a weekly update from the VGCC Team to project members, the general community, and leadership. After the organization shares updates, the floor opens for audience participation.
+      The agenda stays open, with the goals of sharing knowledge, sparking curiosity, encouraging critical reasoning, and inspiring creative output.
+    event_date: "Every Monday at 3PM EDT"
+    submit_link: https://airtable.com/app5dB4okptziH2Vf/pagiJI5ITTR0cuo1w/form?prefill_Category=Show+and+Tell
+  
+  - id: pitch-meeting
+    title: "Pitch Meeting"
+    subtitle: "Pitch an project idea"
+    description: "This meeting will serve as a space for anyone to pitch a new idea. The goal is to capture the idea and document the work."
+    event_date: "Recurring every 1st and 3rd Friday at 3PM EDT"
+    submit_link: https://airtable.com/app5dB4okptziH2Vf/pagiJI5ITTR0cuo1w/for m?prefill_Category=Pitch+Meeting
+

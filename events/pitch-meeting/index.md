@@ -1,5 +1,4 @@
 ---
-layout: "layouts/base_event.njk"
 title: "Pitch Meeting"
 subtitle: "Pitch an project idea"
 event_date: "Recurring every 1st and 3rd Friday at 3PM EDT"

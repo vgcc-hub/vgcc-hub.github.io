@@ -1,5 +1,4 @@
 ---
-layout: "layouts/base_event.njk"
 title: "State of VGCC"
 subtitle: "A weekly update from VGCC Leadership"
 event_date: "Every Monday at 3PM EDT"

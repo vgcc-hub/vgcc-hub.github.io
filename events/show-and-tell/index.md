@@ -1,5 +1,4 @@
 ---
-layout: "layouts/base_event.njk"
 title: "Show and Tell"
 subtitle: "Show off anything you have been working on"
 event_date: "Every Monday at 3PM EDT"
