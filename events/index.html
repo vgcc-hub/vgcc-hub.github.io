@@ -20,11 +20,11 @@ layout: layouts/base_tailwind.njk
           {% endif %}
           <p class="mt-2 text-cream/85">{{ event.subtitle }}</p>
           <div>
-            {% if event.submit_link %}
-            <a href="{{ event.submit_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">Pitch an Idea!</a>
-            {% endif %}
             {% if event.discussion_link %}
             <a href="{{ event.discussion_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-midnight px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-cream   ">Join the Discussion</a>
+            {% endif %}
+            {% if event.submit_link %}
+            <a href="{{ event.submit_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">Pitch an Idea!</a>
             {% endif %}
           </div>
         </div>
