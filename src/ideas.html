@@ -1,0 +1,50 @@
+---
+title: "Ideas"
+layout: layouts/base_tailwind.njk
+pagination:
+  data: ideas
+  size: 1
+  alias: idea
+permalink: "ideas/{{ idea.id }}/index.html"
+submit_link_text: "Pitch an Idea"
+discussion_link_text: "Join the Discussion"
+---
+
+
+  <!-- Hero / Jumbo Title & Subtitle -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-hero-gradient pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <div class="max-w-3xl">
+        <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+          <i class="{{ idea.icon_class }}"></i>
+          {{ idea.title }}<br/>
+          <span class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-sand via-amber to-cream">{{ idea.slogan }}</span>
+        </h1>
+        {% if idea.event_date %}
+        <p class="mt-2 text-lg sm:text-xl text-cream/70">Event Date: <strong>{{ idea.event_date }}</strong></p>
+        {% endif %}
+        <p class="mt-5 text-lg sm:text-xl text-cream/85">{{ idea.subtitle }}</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          {% if idea.submit_link %}
+          <a href="{{ idea.submit_link }}" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+              <i class="ri-lightbulb-flash-line"></i>
+              {{ submit_link_text }}
+            </a>
+          {% endif %}
+        {% if idea.discussion_link %}
+          <a href="{{ idea.discussion_link }}" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+            <i class="ri-discuss-line"></i>
+            {{ discussion_link_text }}
+          </a>
+        {% endif %}
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="/ideas" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-midnight px-6 py-3 text-base font-semibold text-cream hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+            <i class="ri-arrow-left-line"></i>
+            View All Ideas
+          </a>
+          </div>
+      </div>
+    </div>
+  </section>
