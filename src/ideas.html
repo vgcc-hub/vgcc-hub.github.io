@@ -27,21 +27,21 @@ discussion_link_text: "Join the Discussion"
         <p class="mt-5 text-lg sm:text-xl text-cream/85">{{ idea.subtitle }}</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
           {% if idea.submit_link %}
-            <a href="{{ idea.submit_link }}" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
-               
+          <a href="{{ idea.submit_link }}" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+              <i class="ri-lightbulb-flash-line"></i>
               {{ submit_link_text }}
             </a>
           {% endif %}
         {% if idea.discussion_link %}
           <a href="{{ idea.discussion_link }}" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-plum px-6 py-3 text-base font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
-            <i class="fa-solid fa-comment"></i>
+            <i class="ri-discuss-line"></i>
             {{ discussion_link_text }}
           </a>
         {% endif %}
         </div>
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
         <a href="/ideas" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-lg bg-midnight px-6 py-3 text-base font-semibold text-cream hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
-             <i class="fa-solid fa-circle-left"></i>
+            <i class="ri-arrow-left-line"></i>
             View All Ideas
           </a>
           </div>

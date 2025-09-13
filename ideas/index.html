@@ -24,13 +24,21 @@ layout: layouts/base_tailwind.njk
           {% endif %}
           <p class="mt-2 text-sand"><strong>{{ idea.slogan }}</strong></p>
           <p class="mt-2 text-cream/75">{{ idea.subtitle }}</p>
-          <div>
+          <div class="flex flex-col justify-end">
+            <div class="flex-grow mt-4">
             {% if idea.discussion_link %}
-            <a href="{{ idea.discussion_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-midnight px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-cream   ">Join the Discussion</a>
+            <a href="{{ idea.discussion_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-midnight px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-cream   ">
+                <i class="ri-discuss-line"></i>
+                Join the Discussion
+            </a>
             {% endif %}
             {% if idea.submit_link %}
-            <a href="{{ idea.submit_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">Pitch an Idea!</a>
+            <a href="{{ idea.submit_link }}" target="_blank" class="mt-4 inline-block rounded-full bg-plum px-4 py-2 text-sm font-semibold text-cream shadow-glow hover:bg-magenta focus:outline-none focus-visible:ring-2 focus-visible:ring-sand">
+                <i class="ri-lightbulb-flash-line"></i>
+                Pitch an Idea!
+            </a>
             {% endif %}
+            </div>
           </div>
         </div>
         {% endfor %}
